@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "先天起卦回归用例（教材 + 规则核对）",
+    "convention": "values 为规则输入；hourBranch 为时辰序数（子1…亥12）；expect 中 raw 为槽位原始和，num 为 ÷8 后的卦数（0→8），dongYao 为 1–6（自下而上，0→6）；体用：含动爻之卦为用、另一卦为体",
+    "sources": "观梅占例/牡丹占例见《梅花易数》；一数/二数/三数/多数用例按 docs/rules-demo.md 演算核对"
+  },
+  "cases": [
+    {
+      "id": "time-guamei",
+      "method": "时间起卦法 · 观梅占例",
+      "values": { "yearBranch": 5, "month": 12, "day": 17, "hourBranch": 9 },
+      "expect": {
+        "upperRaw": 34, "lowerRaw": 43, "moveRaw": 43,
+        "upperNum": 2, "lowerNum": 3, "dongYao": 1,
+        "benOrder": 49, "zhiOrder": 31,
+        "ti": "兑", "yong": "离", "relation": "用克体"
+      }
+    },
+    {
+      "id": "time-mudan",
+      "method": "时间起卦法 · 牡丹占例",
+      "values": { "yearBranch": 6, "month": 3, "day": 16, "hourBranch": 4 },
+      "expect": {
+        "upperRaw": 25, "lowerRaw": 29, "moveRaw": 29,
+        "upperNum": 1, "lowerNum": 5, "dongYao": 5,
+        "benOrder": 44, "zhiOrder": 50,
+        "ti": "巽", "yong": "乾", "relation": "用克体"
+      }
+    },
+    {
+      "id": "one-number-23",
+      "method": "一数起卦法",
+      "values": { "n": 23, "hourBranch": 9 },
+      "expect": {
+        "upperRaw": 23, "lowerRaw": 32, "moveRaw": 32,
+        "upperNum": 7, "lowerNum": 8, "dongYao": 2,
+        "benOrder": 23, "zhiOrder": 4,
+        "ti": "艮", "yong": "坤", "relation": "比和"
+      }
+    },
+    {
+      "id": "two-numbers-12-33",
+      "method": "二数起卦法",
+      "values": { "numbers": [12, 33] },
+      "expect": {
+        "upperRaw": 12, "lowerRaw": 33, "moveRaw": 45,
+        "upperNum": 4, "lowerNum": 1, "dongYao": 3,
+        "benOrder": 34, "zhiOrder": 54,
+        "ti": "震", "yong": "乾", "relation": "用克体"
+      }
+    },
+    {
+      "id": "three-numbers-7-3-10",
+      "method": "三数起卦法（默认 1|2）",
+      "values": { "numbers": [7, 3, 10] },
+      "expect": {
+        "upperRaw": 7, "lowerRaw": 13, "moveRaw": 20,
+        "upperNum": 7, "lowerNum": 5, "dongYao": 2,
+        "benOrder": 18, "zhiOrder": 52,
+        "ti": "艮", "yong": "巽", "relation": "用克体"
+      }
+    },
+    {
+      "id": "many-numbers-3-5-8-2",
+      "method": "多数起卦法（k=4）",
+      "values": { "numbers": [3, 5, 8, 2] },
+      "expect": {
+        "upperRaw": 8, "lowerRaw": 10, "moveRaw": 18,
+        "upperNum": 8, "lowerNum": 2, "dongYao": 6,
+        "benOrder": 19, "zhiOrder": 41,
+        "ti": "兑", "yong": "坤", "relation": "用生体"
+      }
+    },
+    {
+      "id": "boundary-mod0-8-10",
+      "method": "二数起卦法 · 边界（余 0）",
+      "values": { "numbers": [8, 10] },
+      "expect": {
+        "upperRaw": 8, "lowerRaw": 10, "moveRaw": 18,
+        "upperNum": 8, "lowerNum": 2, "dongYao": 6,
+        "benOrder": 19, "zhiOrder": 41,
+        "ti": "兑", "yong": "坤", "relation": "用生体"
+      }
+    },
+    {
+      "id": "one-number-small-3-2",
+      "method": "一数起卦法 · 数小于 8",
+      "values": { "n": 3, "hourBranch": 2 },
+      "expect": {
+        "upperRaw": 3, "lowerRaw": 5, "moveRaw": 5,
+        "upperNum": 3, "lowerNum": 5, "dongYao": 5,
+        "benOrder": 50, "zhiOrder": 44,
+        "ti": "巽", "yong": "离", "relation": "体生用"
+      }
+    }
+  ]
+}

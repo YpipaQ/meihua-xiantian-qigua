@@ -1,0 +1,516 @@
+{
+  "meta": {
+    "schema": "v3-split-2",
+    "generatedAt": "2026-10-14",
+    "generator": "tools/split-interpret.mjs",
+    "count": 64,
+    "repairs": 5,
+    "repairDetailCount": 10,
+    "repairNote": "5 类缺陷 / 10 条明细",
+    "xiangRepairs": {
+      "yao": {
+        "stripped": 158,
+        "replaced": 3,
+        "variant": 22,
+        "detailCount": 183
+      },
+      "gua": {
+        "stripped": 0,
+        "replaced": 0,
+        "variant": 7,
+        "detailCount": 7
+      },
+      "detailCount": 190,
+      "guaVariantOrders": [
+        6,
+        19,
+        23,
+        30,
+        41,
+        62,
+        63
+      ],
+      "note": "stripped=剥离尾随白话；replaced=夹入非象曰内容按源 F 替换；variantKept=真异文正文保留待人工。yao=爻级小象，gua=卦级大象，分开计数（大象异文集中于 7 卦）。"
+    },
+    "altGua": [
+      20,
+      49
+    ],
+    "altYao": 23
+  },
+  "entries": [
+    {
+      "order": 1,
+      "name": "乾",
+      "file": "01-乾.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 2,
+      "name": "坤",
+      "file": "02-坤.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 3,
+      "name": "屯",
+      "file": "03-屯.json",
+      "repairs": 0,
+      "aiFilled": [
+        "卦辞:哲学含义"
+      ]
+    },
+    {
+      "order": 4,
+      "name": "蒙",
+      "file": "04-蒙.json",
+      "repairs": 0,
+      "aiFilled": [
+        "九二:哲学含义"
+      ]
+    },
+    {
+      "order": 5,
+      "name": "需",
+      "file": "05-需.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 6,
+      "name": "讼",
+      "file": "06-讼.json",
+      "repairs": 0,
+      "aiFilled": [
+        "卦辞:哲学含义"
+      ]
+    },
+    {
+      "order": 7,
+      "name": "师",
+      "file": "07-师.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 8,
+      "name": "比",
+      "file": "08-比.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 9,
+      "name": "小畜",
+      "file": "09-小畜.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 10,
+      "name": "履",
+      "file": "10-履.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 11,
+      "name": "泰",
+      "file": "11-泰.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 12,
+      "name": "否",
+      "file": "12-否.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 13,
+      "name": "同人",
+      "file": "13-同人.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 14,
+      "name": "大有",
+      "file": "14-大有.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 15,
+      "name": "谦",
+      "file": "15-谦.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 16,
+      "name": "豫",
+      "file": "16-豫.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 17,
+      "name": "随",
+      "file": "17-随.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 18,
+      "name": "蛊",
+      "file": "18-蛊.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 19,
+      "name": "临",
+      "file": "19-临.json",
+      "repairs": 1,
+      "aiFilled": []
+    },
+    {
+      "order": 20,
+      "name": "观",
+      "file": "20-观.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 21,
+      "name": "噬嗑",
+      "file": "21-噬嗑.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 22,
+      "name": "贲",
+      "file": "22-贲.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 23,
+      "name": "剥",
+      "file": "23-剥.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 24,
+      "name": "复",
+      "file": "24-复.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 25,
+      "name": "无妄",
+      "file": "25-无妄.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 26,
+      "name": "大畜",
+      "file": "26-大畜.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 27,
+      "name": "颐",
+      "file": "27-颐.json",
+      "repairs": 1,
+      "aiFilled": []
+    },
+    {
+      "order": 28,
+      "name": "大过",
+      "file": "28-大过.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 29,
+      "name": "坎",
+      "file": "29-坎.json",
+      "repairs": 0,
+      "aiFilled": [
+        "六四:哲学含义",
+        "九五:哲学含义",
+        "上六:哲学含义"
+      ]
+    },
+    {
+      "order": 30,
+      "name": "离",
+      "file": "30-离.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 31,
+      "name": "咸",
+      "file": "31-咸.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 32,
+      "name": "恒",
+      "file": "32-恒.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 33,
+      "name": "遁",
+      "file": "33-遁.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 34,
+      "name": "大壮",
+      "file": "34-大壮.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 35,
+      "name": "晋",
+      "file": "35-晋.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 36,
+      "name": "明夷",
+      "file": "36-明夷.json",
+      "repairs": 4,
+      "aiFilled": []
+    },
+    {
+      "order": 37,
+      "name": "家人",
+      "file": "37-家人.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 38,
+      "name": "睽",
+      "file": "38-睽.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 39,
+      "name": "蹇",
+      "file": "39-蹇.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 40,
+      "name": "解",
+      "file": "40-解.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 41,
+      "name": "损",
+      "file": "41-损.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 42,
+      "name": "益",
+      "file": "42-益.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 43,
+      "name": "夬",
+      "file": "43-夬.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 44,
+      "name": "姤",
+      "file": "44-姤.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 45,
+      "name": "萃",
+      "file": "45-萃.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 46,
+      "name": "升",
+      "file": "46-升.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 47,
+      "name": "困",
+      "file": "47-困.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 48,
+      "name": "井",
+      "file": "48-井.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 49,
+      "name": "革",
+      "file": "49-革.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 50,
+      "name": "鼎",
+      "file": "50-鼎.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 51,
+      "name": "震",
+      "file": "51-震.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 52,
+      "name": "艮",
+      "file": "52-艮.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 53,
+      "name": "渐",
+      "file": "53-渐.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 54,
+      "name": "归妹",
+      "file": "54-归妹.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 55,
+      "name": "丰",
+      "file": "55-丰.json",
+      "repairs": 3,
+      "aiFilled": []
+    },
+    {
+      "order": 56,
+      "name": "旅",
+      "file": "56-旅.json",
+      "repairs": 0,
+      "aiFilled": [
+        "初六:哲学含义"
+      ]
+    },
+    {
+      "order": 57,
+      "name": "巽",
+      "file": "57-巽.json",
+      "repairs": 0,
+      "aiFilled": [
+        "初六:哲学含义",
+        "九二:哲学含义",
+        "九三:哲学含义",
+        "六四:哲学含义",
+        "九五:哲学含义",
+        "上九:哲学含义"
+      ]
+    },
+    {
+      "order": 58,
+      "name": "兑",
+      "file": "58-兑.json",
+      "repairs": 1,
+      "aiFilled": [
+        "卦辞:哲学含义"
+      ]
+    },
+    {
+      "order": 59,
+      "name": "涣",
+      "file": "59-涣.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 60,
+      "name": "节",
+      "file": "60-节.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 61,
+      "name": "中孚",
+      "file": "61-中孚.json",
+      "repairs": 0,
+      "aiFilled": [
+        "卦辞:哲学含义"
+      ]
+    },
+    {
+      "order": 62,
+      "name": "小过",
+      "file": "62-小过.json",
+      "repairs": 0,
+      "aiFilled": []
+    },
+    {
+      "order": 63,
+      "name": "既济",
+      "file": "63-既济.json",
+      "repairs": 0,
+      "aiFilled": [
+        "卦辞:哲学含义"
+      ]
+    },
+    {
+      "order": 64,
+      "name": "未济",
+      "file": "64-未济.json",
+      "repairs": 0,
+      "aiFilled": []
+    }
+  ]
+}

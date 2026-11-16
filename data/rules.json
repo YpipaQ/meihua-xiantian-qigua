@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "先天以数起卦 · 槽位规则（首批 5 法）",
+    "convention": "三槽位：上卦数/下卦数/动爻数；÷8 取余 0→8(坤)，÷6 取余 0→6(上爻)；爻位自下而上 1–6，数组下标 = 位 − 1",
+    "term": "时间起卦法 = 观梅占例/牡丹占例所用的同一种方法（语义分组）；二/三/多数同属『对半分组通式』",
+    "status": "默认口径，用户已核对通过（2025），编码中如需调整先改本文档并重跑测试",
+    "proofread": true
+  },
+  "defaultMoveFallback": {
+    "type": "addHour",
+    "note": "仅当某规则给不出动爻数时触发：动爻数 = 上卦原始数 + 下卦原始数 + 时辰序数"
+  },
+  "rules": {
+    "time": {
+      "type": "expr",
+      "name": "时间起卦法",
+      "inputs": ["yearBranch", "month", "day", "hourBranch"],
+      "note": "上=前3项和(年支+月+日)；下=动=全4项和。口径：观梅占例（辰年5 十二月12 十七日17 申时9 → 革之咸）",
+      "upper": "yearBranch+month+day",
+      "lower": "yearBranch+month+day+hourBranch",
+      "move": "yearBranch+month+day+hourBranch"
+    },
+    "one-number": {
+      "type": "expr",
+      "name": "一数起卦法（借时辰补足）",
+      "inputs": ["n"],
+      "autoHour": true,
+      "note": "只给一数：上=n；下=n+时辰序数；动=n+时辰序数。口径同书内『声音起卦：声数作上卦，加时配数作下卦』",
+      "upper": "n",
+      "lower": "n+hourBranch",
+      "move": "n+hourBranch"
+    },
+    "two-numbers": {
+      "type": "split",
+      "name": "二数起卦法",
+      "count": 2,
+      "note": "对半分组 k=2 → 前1项|后1项：上=numbers[0]，下=numbers[1]，动=全和"
+    },
+    "three-numbers": {
+      "type": "split",
+      "name": "三数起卦法（默认 1|2）",
+      "count": 3,
+      "note": "对半分组 k=3 → 前1项|后2项：上=numbers[0]，下=numbers[1]+numbers[2]，动=全和。依据书·三字占『姓上名下』；备选口径 2|1（上=前两和、下=末数）做成开关后再启用"
+    },
+    "many-numbers": {
+      "type": "split",
+      "name": "多数起卦法",
+      "countMin": 4,
+      "note": "对半分组 k≥4：上=前 ⌊k/2⌋ 项之和，下=后 ⌈k/2⌉ 项之和，动=全和；奇数个数时上卦取少一半（k=5→2|3，同书·字数表）"
+    }
+  }
+}

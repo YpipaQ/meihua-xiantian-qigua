@@ -1,0 +1,151 @@
+{
+  "meta": {
+    "schema": "v11-sources-1",
+    "title": "解读文本来源登记（作者 / 原书 / 转载站）",
+    "purpose": "把「这段内容是谁写的」与「从哪个网站取到的」分开记录。转载站不等于作者。",
+    "investigatedAt": "2026-11-16",
+    "method": "对每类 voices 抽样原文，用网络检索比对多处站点，看是否在转载站之外更早/更明确地标注作者",
+    "conclusion": "本项目语料中的 5 类解读文本，**均非转载站原创**；其中断易天机为明代古籍、邵雍为北宋人、傅佩荣为当代学者著作（有版权）、传统解卦/哲学含义为来源不明的通行汇编。v11 起不再记录转载站域名。"
+  },
+  "carrier": {
+    "name": "（原始转载站已移除）",
+    "url": null,
+    "role": "转载 / 汇编站（非原创）",
+    "note": "本项目语料原抓自某转载汇编站。该站并非这些文本的作者，且不应为其引流；v11 起从项目内移除其域名与 URL。"
+  },
+  "sources": [
+    {
+      "voiceKey": "断易天机",
+      "coverage": {
+        "gua": 63,
+        "yao": 0
+      },
+      "originalAuthor": "旧题 袁天罡（唐）/ 麻衣道者（宋）",
+      "originalWork": "《断易天机》",
+      "era": "明代通行本（托名之作）",
+      "rightsStatus": "public-domain",
+      "rightsNote": "古籍原文，已进入公有领域。现代标点/整理部分可能有个别整理者主张，但文本本身不受版权保护。",
+      "evidence": [
+        "多站点以「《断易天机》解」为标题引用同段文字，逐字一致",
+        "例：搜狐/知乎/百度文库等 2019–2025 年多篇文章，均标注『《断易天机》解 乾象征天，六阳爻构成乾卦…』"
+      ],
+      "attributionAdvice": "标「《断易天机》（旧题袁天罡/麻衣道者）」"
+    },
+    {
+      "voiceKey": "邵雍",
+      "coverage": {
+        "gua": 63,
+        "yao": 383
+      },
+      "originalAuthor": "邵雍（北宋，1011–1077）",
+      "originalWork": "河洛理数体系解卦（通行称「邵雍河洛理数解卦」）",
+      "era": "北宋",
+      "rightsStatus": "public-domain",
+      "rightsNote": "古人著作，公有领域。",
+      "evidence": [
+        "多站点标注「北宋易学家邵雍解」「邵雍河洛理数解卦」，文本与本站一致",
+        "含吉/凶/平分级（本项目已拆出 grade 字段）"
+      ],
+      "attributionAdvice": "标「邵雍（北宋）· 河洛理数解卦」"
+    },
+    {
+      "voiceKey": "傅佩荣",
+      "coverage": {
+        "gua": 63,
+        "yao": 383
+      },
+      "originalAuthor": "傅佩荣（台湾学者，1950– ）",
+      "originalWork": "《傅佩荣解卦手册》（时运/财运/家宅/身体 四栏体例）",
+      "era": "当代",
+      "rightsStatus": "copyrighted",
+      "rightsNote": "⚠️ **当代在世作者的著作，受著作权保护**。本项目仅在本地作学习研究参考，未获授权，不应商业使用或再分发。",
+      "evidence": [
+        "多站点标注「傅佩荣解卦手册」「台湾国学大儒傅佩荣解」，四栏体例一致",
+        "四栏（时运/财运/家宅/身体）为其手册固定格式"
+      ],
+      "attributionAdvice": "标「傅佩荣《解卦手册》—— 版权归原作者，本项目仅作学习参考」"
+    },
+    {
+      "voiceKey": "传统解卦",
+      "coverage": {
+        "gua": 63,
+        "yao": 0
+      },
+      "originalAuthor": "未能确定单一作者（通行汇编体例）",
+      "originalWork": "通行「传统解卦」八栏（导语/大象/运势/事业/经商/求名/婚恋/决策）",
+      "era": "现代汇编",
+      "rightsStatus": "uncertain",
+      "rightsNote": "⚠️ 体例与文字在多个站点一字不差，但均无署名。至少可追到「姜群传统解卦」（2019 年搜狐文章）。权利人无法确定。",
+      "evidence": [
+        "搜狐 2019 文章《姜群：周易第1卦-乾卦…》中直接写「姜群传统解卦：」，正文与本项目语料一字不差",
+        "同一文本在数十个站点以「传统解卦」为名出现，均无原始署名"
+      ],
+      "attributionAdvice": "标「传统解卦（通行汇编，来源不明）」并注明风险"
+    },
+    {
+      "voiceKey": "哲学含义",
+      "coverage": {
+        "gua": 64,
+        "yao": 385
+      },
+      "originalAuthor": "未能确定（多源汇编）",
+      "originalWork": "通行「哲学含义 / 爻辞释义」汇编体例",
+      "era": "现代汇编",
+      "rightsStatus": "uncertain",
+      "rightsNote": "⚠️ 文字在多站点重复出现，无统一署名。含「我们前面说过…」等口语化表述，像某位讲者/作者的讲义。",
+      "evidence": [
+        "内容含教学口吻（「我们前面说过，六爻由下而上的位序是…」），但检索不到确切作者",
+        "多站点重复，均无署名"
+      ],
+      "attributionAdvice": "标「哲学含义（通行汇编，来源不明）」并注明风险"
+    },
+    {
+      "voiceKey": "变卦",
+      "coverage": {
+        "gua": 0,
+        "yao": 382
+      },
+      "originalAuthor": "未能确定（卦象说明通行体例）",
+      "originalWork": "之卦的卦象/卦义说明",
+      "era": "现代汇编",
+      "rightsStatus": "uncertain",
+      "rightsNote": "⚠️ 与「传统解卦」体例相近，疑同源。",
+      "evidence": [
+        "「这个卦是异卦（下巽上乾）相叠…」句式与「传统解卦」导语高度雷同"
+      ],
+      "attributionAdvice": "标「卦象说明（通行汇编）」"
+    },
+    {
+      "voiceKey": "（本项目自有）",
+      "coverage": {
+        "gua": 64,
+        "yao": 0
+      },
+      "originalAuthor": "本项目作者",
+      "originalWork": "64 卦卦意导语（data/interpretations/hexagram-verdicts.json）、体用断语模板",
+      "era": "2025–2026",
+      "rightsStatus": "project-own",
+      "rightsNote": "本项目原创，适用仓库的 MIT 许可证。",
+      "evidence": [
+        "data/interpretations/ 下文件，meta.status 标注 reviewed-v2-定稿"
+      ],
+      "attributionAdvice": "无需外部署名"
+    }
+  ],
+  "riskSummary": {
+    "publicDomain": [
+      "断易天机",
+      "邵雍"
+    ],
+    "copyrighted": [
+      "傅佩荣"
+    ],
+    "uncertain": [
+      "传统解卦",
+      "哲学含义",
+      "变卦"
+    ],
+    "highestRisk": "傅佩荣（当代在世作者，四栏手册体例可明确对应其出版物）",
+    "note": "若公开发布，最需要关注的是「傅佩荣」一栏；其余为古籍或来源不明汇编。"
+  }
+}

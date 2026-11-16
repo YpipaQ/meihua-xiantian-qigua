@@ -1,0 +1,45 @@
+# 统一换行符策略 —— 跨平台协作的关键
+#
+# 背景：Windows 的 .cmd/.bat 必须是 CRLF（否则 cmd 解析异常）；
+#       Linux/macOS 的 .sh 必须是 LF（否则 bash 报 $'\r' 错误）。
+# 若不加约束，git 在 Windows 上 checkout 会把 .sh 也转成 CRLF，导致脚本跑不起来。
+#
+# 策略：
+#   * text=auto          其他文本文件按平台自动转换（仓库内统一存 LF）
+#   *.sh   text eol=lf   脚本始终 LF
+#   *.cmd  text eol=crlf Windows 批处理始终 CRLF
+#   *.bat  text eol=crlf 同上
+
+* text=auto
+
+# 脚本：强制各自平台的换行符
+*.sh    text eol=lf
+*.bash  text eol=lf
+*.cmd   text eol=crlf
+*.bat   text eol=crlf
+*.ps1   text eol=crlf
+
+# 可执行文件与二进制：不做换行转换
+*.exe   binary
+*.dll   binary
+*.so    binary
+*.dylib binary
+*.pak   binary
+*.bin   binary
+*.ico   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.woff  binary
+*.woff2 binary
+
+# 数据文件：JSON 保持 LF（程序按文本读取，转 CRLF 也不影响，但统一更清爽）
+*.json  text eol=lf
+*.md    text eol=lf
+*.js    text eol=lf
+*.mjs   text eol=lf
+*.cjs   text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf

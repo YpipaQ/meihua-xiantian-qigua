@@ -1,0 +1,21 @@
+# ===== 依赖与构建产物（不进版本库）=====
+node_modules/
+dist-desktop/
+# Release 附件（zip 90-98MB，超 GitHub 100MB 单文件限制，只上传到 GitHub Releases，不进 git）
+release-assets/
+.runtime/
+
+# 桌面端运行残留
+*.log
+
+# 编辑器 / 系统杂项
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.tmp
+*.swp
+*~

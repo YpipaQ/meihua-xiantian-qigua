@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 数据清单为根相对路径（data/...）：固定 base 使 /web/index.html 下 fetch 仍解析到站点根 -->
+  <base href="/" />
+  <title>梅花易数 · 先天起卦法（以数起卦）</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="/web/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>梅花易数 · 先天起卦法</h1>
+    <p class="sub">时间起卦 / 数字起卦 / 铜钱摇卦 —— 唯一成卦核 · 规则驱动</p>
+  </header>
+
+  <nav id="tabs" class="tabs">
+    <button type="button" data-tab="time" class="tab active">时间起卦</button>
+    <button type="button" data-tab="numbers" class="tab">数字起卦</button>
+    <button type="button" data-tab="coin" class="tab">铜钱摇卦</button>
+  </nav>
+
+  <main>
+    <!-- 时间起卦输入 -->
+    <section id="panel-time" class="panel">
+      <h2>时间起卦（公历自动换农历干支 / 农历直填）</h2>
+
+      <div class="seg" id="cal-seg">
+        <button type="button" data-cal="solar" class="on">公历（阳历）· 自动换算</button>
+        <button type="button" data-cal="lunar">农历（阴历）· 直填</button>
+      </div>
+
+      <!-- 公历模式 -->
+      <div id="time-solar">
+        <div class="fields">
+          <label>公历日期（1900–2100）
+            <input id="sol-date" type="date" min="1900-01-01" max="2100-12-31" />
+          </label>
+          <button type="button" id="btn-today">今天</button>
+        </div>
+        <div class="seg" id="time-type-seg">
+          <button type="button" data-tt="clock" class="on">24 小时制</button>
+          <button type="button" data-tt="branch">时辰选择（含生肖）</button>
+        </div>
+        <div class="fields">
+          <label id="wrap-clock">时间
+            <input type="time" id="sol-clock" step="60" />
+          </label>
+          <label id="wrap-branch" class="hidden">时辰
+            <select id="sol-branch"></select>
+          </label>
+        </div>
+        <div id="sol-readout" class="readout"></div>
+      </div>
+
+      <!-- 农历模式 -->
+      <div id="time-lunar" class="hidden">
+        <div class="fields">
+          <label>农历年份（可空，自动推年支）
+            <input id="lun-year" type="number" min="1900" max="2100" step="1" />
+          </label>
+          <label>年支（可手改）
+            <select id="lun-year-branch"></select>
+          </label>
+          <label>农历月<select id="lun-month"></select></label>
+          <label>农历日<select id="lun-day"></select></label>
+          <label>时辰<select id="lun-branch"></select></label>
+        </div>
+        <div class="hint">闰月说明：本盘按「当月月数」取数（闰月不另计一个月份序），故无需勾选闰月；如需精确处理，请改用「公历＋24 小时制」自动换算。</div>
+        <div id="lun-readout" class="readout"></div>
+        <div class="hint">提示：农历模式按所选时辰的支序计。若涉及 23:00 后的晚子时（跨日），建议改用「公历＋24 小时制」精确换算。</div>
+      </div>
+
+      <button type="button" id="btn-cast-time" class="primary">起卦</button>
+      <div id="conv-note" class="hint"></div>
+    </section>
+
+    <!-- 数字起卦输入 -->
+    <section id="panel-numbers" class="panel hidden">
+      <h2>数字起卦（输入 1 个及以上数字，按个数自动选规则）</h2>
+      <div class="fields">
+        <label class="grow">批量粘贴（支持 <code>12,33</code> / <code>12 33</code> / 换行分隔，自动拆成多个输入框）
+          <textarea id="number-paste" rows="2" placeholder="在此粘贴或输入，如：12,33"></textarea>
+        </label>
+      </div>
+      <div id="number-fields" class="fields"></div>
+      <div id="one-hour-wrap" class="fields hidden">
+        <label>时辰（仅输入 1 数时用于补足下卦/动爻；留空＝当前时辰）
+          <select id="num-hour"><option value="">（自动取当前时辰）</option></select>
+        </label>
+      </div>
+      <div class="row">
+        <button type="button" id="btn-add-number">＋ 加一个数</button>
+        <button type="button" id="btn-remove-number">－ 减一个数</button>
+      </div>
+      <div id="number-hint" class="hint"></div>
+      <button type="button" id="btn-cast-numbers" class="primary">起卦</button>
+    </section>
+
+    <!-- 六爻铜钱摇卦输入 -->
+    <section id="panel-coin" class="panel hidden">
+      <h2>六爻铜钱起卦（摇卦）</h2>
+      <div id="coin-config-note" class="hint"></div>
+      <div id="coin-stage">
+        <p id="coin-progress">共掷 6 爻（自下而上：初爻 → 上爻）。每爻掷三枚铜钱。</p>
+        <button type="button" id="btn-toss" class="primary">掷第 1 爻</button>
+        <div id="toss-last" class="readout"></div>
+        <div id="coin-slots"></div>
+      </div>
+      <div class="row">
+        <button type="button" id="btn-reset-coin">重新起卦</button>
+      </div>
+    </section>
+
+    <hr />
+
+    <section id="result">
+      <div id="result-body" class="placeholder">选择起卦方式并点击「起卦」。</div>
+    </section>
+  </main>
+
+  <script type="module" src="/web/js/ui.js"></script>
+</body>
+</html>

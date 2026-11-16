@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "天干地支 · 时辰字典（时间入口用）",
+    "convention": "时辰两小时一段：子 23:00–00:59 … 亥 21:00–22:59；本工具日界：23:00 起算次日子时；hourHours 为该时辰覆盖的整点小时数",
+    "note": "生肖与地支一一对应（子鼠丑牛…）；五行：亥子水、寅卯木、巳午火、申酉金、辰戌丑未土"
+  },
+  "gan": ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"],
+  "zhi": [
+    { "index": 1,  "zhi": "子", "animal": "鼠", "shichen": "子时", "five": "水", "hourText": "23:00–00:59", "hourHours": [23, 0] },
+    { "index": 2,  "zhi": "丑", "animal": "牛", "shichen": "丑时", "five": "土", "hourText": "01:00–02:59", "hourHours": [1] },
+    { "index": 3,  "zhi": "寅", "animal": "虎", "shichen": "寅时", "five": "木", "hourText": "03:00–04:59", "hourHours": [3] },
+    { "index": 4,  "zhi": "卯", "animal": "兔", "shichen": "卯时", "five": "木", "hourText": "05:00–06:59", "hourHours": [5] },
+    { "index": 5,  "zhi": "辰", "animal": "龙", "shichen": "辰时", "five": "土", "hourText": "07:00–08:59", "hourHours": [7] },
+    { "index": 6,  "zhi": "巳", "animal": "蛇", "shichen": "巳时", "five": "火", "hourText": "09:00–10:59", "hourHours": [9] },
+    { "index": 7,  "zhi": "午", "animal": "马", "shichen": "午时", "five": "火", "hourText": "11:00–12:59", "hourHours": [11] },
+    { "index": 8,  "zhi": "未", "animal": "羊", "shichen": "未时", "five": "土", "hourText": "13:00–14:59", "hourHours": [13] },
+    { "index": 9,  "zhi": "申", "animal": "猴", "shichen": "申时", "five": "金", "hourText": "15:00–16:59", "hourHours": [15] },
+    { "index": 10, "zhi": "酉", "animal": "鸡", "shichen": "酉时", "five": "金", "hourText": "17:00–18:59", "hourHours": [17] },
+    { "index": 11, "zhi": "戌", "animal": "狗", "shichen": "戌时", "five": "土", "hourText": "19:00–20:59", "hourHours": [19] },
+    { "index": 12, "zhi": "亥", "animal": "猪", "shichen": "亥时", "five": "水", "hourText": "21:00–22:59", "hourHours": [21] }
+  ]
+}

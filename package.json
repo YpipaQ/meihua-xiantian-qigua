@@ -1,0 +1,22 @@
+{
+  "name": "meihua-xiantian-qigua",
+  "version": "1.0.0",
+  "private": true,
+  "description": "梅花易数·先天起卦法（以数起卦）——规则驱动 + 唯一成卦核；零依赖、免构建、离线可用；Windows/Linux/macOS 通用",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run-tests.js && node tests/run-calendar-tests.js && node tests/run-coin-tests.js && node tests/run-verdict-tests.js && node tests/run-classic-tests.js && node tests/run-readings-tests.js && node tests/run-najia-tests.js && node tests/run-panview-tests.js && node tests/run-refguide-tests.js && node tests/run-catalog-tests.js && node tests/run-interpret-tests.js && node tests/run-xiangjie-tests.js && node tests/run-liuyao-tests.js && node tests/run-shiyi-tests.js && node tests/run-platform-tests.js && node tests/run-desktop-tests.js",
+    "split:interpret": "node tools/split-interpret.mjs",
+    "proofread:classic": "node tools/proofread-classic.mjs",
+    "serve": "node tools/serve.mjs",
+    "readings:demo": "node scripts/demo-readings.js",
+    "crosscheck:shiyi": "node tools/crosscheck-shiyi.mjs",
+    "desktop": "electron desktop/main.cjs",
+    "desktop:build": "node desktop/build.mjs"
+  },
+  "devDependencies": {
+    "electron": "33.4.11",
+    "@electron/packager": "^18.3.6"
+  },
+  "main": "desktop/main.cjs"
+}

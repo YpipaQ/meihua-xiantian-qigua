@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "先天八卦表（梅花易数起卦与装卦基础）",
+    "purpose": "提供先天卦数、卦象爻线、五行、先天方位等基础数据；卦数用于先天起卦法取卦，五行用于体用生克断卦",
+    "lineConvention": "lines 数组自下而上记录每爻：1=阳(━━━)，0=阴(━ ━)",
+    "proofread": false
+  },
+  "trigrams": [
+    { "id": 1, "name": "乾", "symbol": "☰", "lines": [1, 1, 1], "wuXing": "金", "nature": "天", "directionXianTian": "南", "de": "健", "note": "为天、为君、为父、为刚健" },
+    { "id": 2, "name": "兑", "symbol": "☱", "lines": [1, 1, 0], "wuXing": "金", "nature": "泽", "directionXianTian": "东南", "de": "悦", "note": "为泽、为少女、为悦" },
+    { "id": 3, "name": "离", "symbol": "☲", "lines": [1, 0, 1], "wuXing": "火", "nature": "火", "directionXianTian": "东", "de": "丽", "note": "为火、为日、为明、为附丽" },
+    { "id": 4, "name": "震", "symbol": "☳", "lines": [1, 0, 0], "wuXing": "木", "nature": "雷", "directionXianTian": "东北", "de": "动", "note": "为雷、为长男、为动" },
+    { "id": 5, "name": "巽", "symbol": "☴", "lines": [0, 1, 1], "wuXing": "木", "nature": "风", "directionXianTian": "西南", "de": "入", "note": "为风、为长女、为入" },
+    { "id": 6, "name": "坎", "symbol": "☵", "lines": [0, 1, 0], "wuXing": "水", "nature": "水", "directionXianTian": "西", "de": "陷", "note": "为水、为中男、为陷、为险" },
+    { "id": 7, "name": "艮", "symbol": "☶", "lines": [0, 0, 1], "wuXing": "土", "nature": "山", "directionXianTian": "西北", "de": "止", "note": "为山、为少男、为止" },
+    { "id": 8, "name": "坤", "symbol": "☷", "lines": [0, 0, 0], "wuXing": "土", "nature": "地", "directionXianTian": "北", "de": "顺", "note": "为地、为母、为柔顺" }
+  ]
+}
